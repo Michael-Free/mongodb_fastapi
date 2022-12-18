@@ -23,7 +23,8 @@ This is meant to get a development project off to a running start.
   - Windows - Pandora's Box
     - `pyvenv.cfg` will need to be modified likely... even if all requirements are installed with exact versions.
     - There may be some other versioning issues? 
-      - In future releases there maybe some container abstraction to bring Windows Desktop/Server Developers into the rest of the world/
+      - In future releases there maybe some container abstraction to bring Windows Desktop/Server Developers into the rest of the world.
+      - The next Windows Update could bork everything. Who knows?
 ## Getting Started
 ### Installing MongoDB
 ### Installing MongoDB Compass
