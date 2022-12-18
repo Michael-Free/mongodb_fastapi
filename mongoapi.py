@@ -1,3 +1,4 @@
+""" MongoDB FastAPI """
 import json
 import pymongo
 from pymongo.errors import PyMongoError
