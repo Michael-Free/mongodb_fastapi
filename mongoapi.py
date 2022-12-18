@@ -279,7 +279,6 @@ async def update_inventory(update_json: ItemUpdate):
     )
 async def delete_inventory(delete_json: ItemIn):
     """ Delete a document in inventory collection """
-
     delete_input = delete_json.dict()
 
     try:
