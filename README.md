@@ -13,6 +13,17 @@ This is meant to get a development project off to a running start.
 - [MongoDB Compass](https://www.mongodb.com/docs/compass/current/install/)
   - This is a nice to have GUI interface, but not mandatory. 
   - This will help alot of troubleshooting.
+- Operating Systems:
+  - Ubuntu - 20.04/22.04 LTS Compatible
+    - Ubuntu/Debian variants should work with slight modifications.
+    - Other Linux Distros should also work with slight variations.
+  - MacOS - Expected to work
+    - Slight variations might be needed in `pyvenv.cfg` but since it's mostly BSD, it should work.
+    - Haven't tested anything BSD related.
+  - Windows - Pandora's Box
+    - `pyvenv.cfg` will need to be modified likely... even if all requirements are installed with exact versions.
+    - There may be some other versioning issues? 
+      - In future releases there maybe some container abstraction to bring Windows Desktop/Server Developers into the rest of the world/
 ## Getting Started
 ### Installing MongoDB
 ### Installing MongoDB Compass
