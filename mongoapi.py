@@ -168,6 +168,7 @@ async def all_inventory():
     """ Get all items in inventory collection. """
     try:
         all_docs = inventory.find({}, {"_id":0})
+
     except PyMongoError as mongo_error:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
@@ -278,9 +279,9 @@ async def update_inventory(update_json: ItemUpdate):
     )
 async def delete_inventory(delete_json: ItemIn):
     """ Delete a document in inventory collection """
-    
+
     delete_input = delete_json.dict()
-    
+
     try:
         find_doc = inventory.find_one(delete_input)
         find_id = find_doc["_id"]
