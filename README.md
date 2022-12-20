@@ -17,6 +17,7 @@ This is meant to get a development project off to a running start.
   - Ubuntu - 20.04/22.04 LTS Compatible
     - Ubuntu/Debian variants should work with slight modifications.
     - Other Linux Distros should also work with slight variations.
+    - This is what this demo is based off of.
   - MacOS - Expected to work
     - Slight variations might be needed in `pyvenv.cfg` but since it's mostly BSD, it should work.
     - Haven't tested anything BSD related.
