@@ -29,7 +29,6 @@ This is meant to get a development project off to a running start.
 ## Getting Started
 ### Installing MongoDB
 The first things we'll want to do is make sure Ubuntu Server is up to date and we install GNU Privacy Guard and Wget.
-
 ```
 apt update && apt upgrade -y
 apt-get install -y gnupg2 gnupg wget
@@ -91,5 +90,7 @@ git clone git@github.com:Michael-Free/mongodb_fastapi.git
 
 ### Installing Python Requirements
 ```
-
+python -m pip install -r requirements.txt
 ```
+
+
