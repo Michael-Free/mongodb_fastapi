@@ -56,7 +56,7 @@ echo "mongodb-mongosh hold" | sudo dpkg --set-selections
 echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
 echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 ```
-Start the MongoDb Servnice.
+Start the MongoDB Service.
 ```
 sudo systemctl start mongod
 ```
@@ -70,6 +70,14 @@ sudo systemctl enable mongod
 ```
 
 ### Installing MongoDB Compass
+Compass is an interactive tool for querying, optimizing, and analyzing your MongoDB data. It will make working with your database extremely easy.  Download Compass:
+```
+wget https://downloads.mongodb.com/compass/mongodb-compass_1.33.1_amd64.deb
+```
+Now install that package.
+```
+sudo dpkg -i mongodb-compass_1.33.1_amd64.deb
+```
 ### Installing Python & Pip
 ### Installing Python Requirements
 ## Concepts
