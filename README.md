@@ -26,8 +26,7 @@ This is meant to get a development project off to a running start.
     - There may be some other versioning issues? Toss the dice.
     - The next Windows Update could bork everything. Who knows?
 
-## Getting Started
-### Installing MongoDB
+## Installing MongoDB
 The first things we'll want to do is make sure Ubuntu Server is up to date and we install GNU Privacy Guard and Wget.
 ```
 apt update && apt upgrade -y
@@ -68,7 +67,7 @@ Now set the service to start on boot.
 sudo systemctl enable mongod
 ```
 
-### Installing MongoDB Compass
+## Installing MongoDB Compass
 Compass is an interactive tool for querying, optimizing, and analyzing your MongoDB data. It will make working with your database extremely easy.  Download Compass:
 ```
 wget https://downloads.mongodb.com/compass/mongodb-compass_1.33.1_amd64.deb
@@ -77,13 +76,13 @@ Now install that package.
 ```
 sudo dpkg -i mongodb-compass_1.33.1_amd64.deb
 ```
-### Installing Python & Pip
+## Installing Python & Pip
 ```
 sudo apt install -y python3 python3-pip
 ```
-### Installing This Repo
+## Installing This Repo
 
-#### Clone the Repository
+### Clone the Repository
 ```
 git clone git@github.com:Michael-Free/mongodb_fastapi.git
 ```
@@ -93,4 +92,7 @@ git clone git@github.com:Michael-Free/mongodb_fastapi.git
 python -m pip install -r requirements.txt
 ```
 
-
+## Running the API
+```
+uvicorn mongoapi:app --reload
+```
