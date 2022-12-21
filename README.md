@@ -25,8 +25,50 @@ This is meant to get a development project off to a running start.
     - `pyvenv.cfg` will need to be modified likely... even if all requirements are installed with exact versions.
     - There may be some other versioning issues? Toss the dice.
     - The next Windows Update could bork everything. Who knows?
+
 ## Getting Started
 ### Installing MongoDB
+The first things we'll want to do is make sure Ubuntu Server is up to date and we install GNU Privacy Guard and Wget.
+
+```
+apt update && apt upgrade -y
+apt-get install -y gnupg2 gnupg wget
+```
+Now that wget is installed, we are going to download and install the apt key for MongoDB and install it on our system.
+```
+wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+```
+Now we want to add the MongoDB Repo to APT so we can install it.
+```
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+```
+Update APT and install MongoDB.
+```
+sudo apt update
+sudo apt install -y mongodb-org
+```
+Just to be on the safe side, we are going to put a hold on upgrading any releases of MongoDB.  Just incase an unattended upgrade bumps our version up and creates a breaking change.
+```
+echo "mongodb-org hold" | sudo dpkg --set-selections
+echo "mongodb-org-database hold" | sudo dpkg --set-selections
+echo "mongodb-org-server hold" | sudo dpkg --set-selections
+echo "mongodb-mongosh hold" | sudo dpkg --set-selections
+echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+```
+Start the MongoDb Servnice.
+```
+sudo systemctl start mongod
+```
+Check the status of the service to make sure it is running correctly.
+```
+sudo systemctl status mongod
+```
+Now set the service to start on boot.
+```
+sudo systemctl enable mongod
+```
+
 ### Installing MongoDB Compass
 ### Installing Python & Pip
 ### Installing Python Requirements
