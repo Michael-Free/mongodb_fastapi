@@ -79,6 +79,17 @@ Now install that package.
 sudo dpkg -i mongodb-compass_1.33.1_amd64.deb
 ```
 ### Installing Python & Pip
+```
+sudo apt install -y python3 python3-pip
+```
+### Installing This Repo
+
+#### Clone the Repository
+```
+git clone git@github.com:Michael-Free/mongodb_fastapi.git
+```
+
 ### Installing Python Requirements
-## Concepts
-## Testing the API
+```
+
+```
