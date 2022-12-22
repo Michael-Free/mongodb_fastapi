@@ -98,18 +98,13 @@ uvicorn mongoapi:app --reload
 ```
 
 # To Dos:
-- [ ] Unit tests
 - [X] Possibly some await calls for mongo functions
-- [ ] Rewriting a couple of functions to be more efficient
 - [X] Creating an install/deployment script for mongodb
 - [X] Better documentation
 - [X] Linting to make sure it conforms with python codestyles
 - [X] using black to make sure there is unified code formatting
 - [X] using bandit to cover any common vulns in the code
-- [ ] Production Deployment
-  - [ ] Deployment to LXD Container
-  - [ ] Deployment to Docker/Podman Container
-  - [ ] Deployment to Kubernetes
+
 ## Notes
 ### Linting
  ```
