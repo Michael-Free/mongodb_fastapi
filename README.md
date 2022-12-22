@@ -104,7 +104,7 @@ uvicorn mongoapi:app --reload
 - [ ] Creating an install/deployment script for mongodb
 - [ ] Better documentation
 - [ ] Virtual environment setup and documentation
-- [ ] Linting to make sure it confirms with python codestyles
+- [X] Linting to make sure it confirms with python codestyles
 - [ ] using black to make sure there is unified code formatting
 - [ ] using bandit to cover any common vulns in the code
 - [ ] Production Deployment
