@@ -121,3 +121,7 @@ Minor changes made.
 
 ### Bandit
 Found no major/minor/medium issues in the code.
+
+### install_mongo.sh
+run as root.
+
