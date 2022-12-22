@@ -101,9 +101,8 @@ uvicorn mongoapi:app --reload
 - [ ] Unit tests
 - [X] Possibly some await calls for mongo functions
 - [ ] Rewriting a couple of functions to be more efficient
-- [ ] Creating an install/deployment script for mongodb
+- [X] Creating an install/deployment script for mongodb
 - [X] Better documentation
-- [ ] Virtual environment setup and documentation
 - [X] Linting to make sure it conforms with python codestyles
 - [X] using black to make sure there is unified code formatting
 - [X] using bandit to cover any common vulns in the code
