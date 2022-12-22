@@ -105,7 +105,7 @@ uvicorn mongoapi:app --reload
 - [ ] Better documentation
 - [ ] Virtual environment setup and documentation
 - [X] Linting to make sure it confirms with python codestyles
-- [ ] using black to make sure there is unified code formatting
+- [X] using black to make sure there is unified code formatting
 - [ ] using bandit to cover any common vulns in the code
 - [ ] Production Deployment
   - [ ] Deployment to LXD Container
