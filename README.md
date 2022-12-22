@@ -104,7 +104,7 @@ uvicorn mongoapi:app --reload
 - [ ] Creating an install/deployment script for mongodb
 - [ ] Better documentation
 - [ ] Virtual environment setup and documentation
-- [X] Linting to make sure it confirms with python codestyles
+- [X] Linting to make sure it conforms with python codestyles
 - [X] using black to make sure there is unified code formatting
 - [X] using bandit to cover any common vulns in the code
 - [ ] Production Deployment
@@ -118,7 +118,7 @@ uvicorn mongoapi:app --reload
  ```
  This is currently getting a 10/10 rating.
 ### Black code formatting
-Minor changes mande
+Minor changes made.
 
 ### Bandit
-Found no major issues in the code
+Found no major/minor/medium issues in the code.
