@@ -77,7 +77,7 @@ async def create_inventory(create_json: ItemIn):
     Create a new item in the Inventory Collection.
     """
     try:
-        find_doc = inventory.find_one(create_json.dict())
+        find_doc = await inventory.find_one(create_json.dict())
 
     except PyMongoError as mongo_error:
         raise HTTPException(
@@ -86,7 +86,7 @@ async def create_inventory(create_json: ItemIn):
 
     if find_doc is None:
         try:
-            create_doc = inventory.insert_one(create_json.dict())
+            create_doc = await inventory.insert_one(create_json.dict())
             return ItemOut(
                 status=status.HTTP_201_CREATED,
                 message="Item created in inventory",
@@ -145,7 +145,7 @@ async def read_inventory(find_json):
         ) from json_error
 
     try:
-        find_doc = inventory.find_one(validate_json)
+        find_doc = await inventory.find_one(validate_json)
 
     except PyMongoError as mongo_error:
         raise HTTPException(
@@ -206,7 +206,7 @@ async def all_inventory():
 async def search_inventory(search_query):
     """Search an entire collection in each key"""
     try:
-        all_docs = inventory.find({}, {"_id": 0})
+        all_docs = await inventory.find({}, {"_id": 0})
 
     except PyMongoError as mongo_error:
         raise HTTPException(
@@ -245,8 +245,8 @@ async def update_inventory(update_json: ItemUpdate):
     update_output = update_json.dict()["outputdoc"]
 
     try:
-        find_input = inventory.find_one(update_input)
-        find_output = inventory.find_one(update_output)
+        find_input = await inventory.find_one(update_input)
+        find_output = await inventory.find_one(update_output)
 
     except PyMongoError as mongo_error:
         raise HTTPException(
@@ -267,8 +267,8 @@ async def update_inventory(update_json: ItemUpdate):
 
     try:
         update_query = {"$set": update_output}
-        inventory.update_one(update_input, update_query)
-        updated_item = inventory.find_one(update_output)
+        await inventory.update_one(update_input, update_query)
+        updated_item = await inventory.find_one(update_output)
         updated_docid = str(updated_item["_id"])
         del updated_item["_id"]
         return ItemOut(
@@ -301,7 +301,7 @@ async def delete_inventory(delete_json: ItemIn):
     delete_input = delete_json.dict()
 
     try:
-        find_doc = inventory.find_one(delete_input)
+        find_doc = await inventory.find_one(delete_input)
         find_id = find_doc["_id"]
 
     except PyMongoError as mongo_error:
@@ -316,8 +316,8 @@ async def delete_inventory(delete_json: ItemIn):
         )
 
     try:
-        inventory.delete_one(delete_input)
-        check_delete = inventory.find(find_id)
+        await inventory.delete_one(delete_input)
+        check_delete = await inventory.find(find_id)
 
     except PyMongoError as mongo_error:
         raise HTTPException(
