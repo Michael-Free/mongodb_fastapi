@@ -96,3 +96,11 @@ python -m pip install -r requirements.txt
 ```
 uvicorn mongoapi:app --reload
 ```
+
+# To Dos:
+- [ ] Unit tests
+- [ ] Possibly some await calls for mongo functions
+- [ ] Rewriting a couple of functions to be more efficient
+- [ ] Creating an install/deployment script for mongodb
+- [ ] Better documentation
+- [ ] Virtual environment setup and documentation
