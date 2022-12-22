@@ -104,6 +104,8 @@ uvicorn mongoapi:app --reload
 - [ ] Creating an install/deployment script for mongodb
 - [ ] Better documentation
 - [ ] Virtual environment setup and documentation
+- [ ] Linting to make sure it confirms with python codestyles
+- [ ] using black to make sure there is unified code formatting
 - [ ] Production Deployment
   - [ ] Deployment to LXD Container
   - [ ] Deployment to Docker/Podman Container
