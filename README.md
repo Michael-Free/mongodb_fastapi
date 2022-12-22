@@ -111,3 +111,10 @@ uvicorn mongoapi:app --reload
   - [ ] Deployment to LXD Container
   - [ ] Deployment to Docker/Podman Container
   - [ ] Deployment to Kubernetes
+## Notes
+### Linting
+ ```
+ pylint --extension-pkg-whitelist='pydantic' mongoapi.py 
+ ```
+ This is currently getting a 10/10 rating.
+ 
