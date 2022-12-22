@@ -104,3 +104,6 @@ uvicorn mongoapi:app --reload
 - [ ] Creating an install/deployment script for mongodb
 - [ ] Better documentation
 - [ ] Virtual environment setup and documentation
+- [ ] Deployment to LXD Container
+- [ ] Deployment to Docker/Podman Container
+- [ ] Deployment to Kubernetes
