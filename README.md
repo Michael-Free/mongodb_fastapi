@@ -106,7 +106,7 @@ uvicorn mongoapi:app --reload
 - [ ] Virtual environment setup and documentation
 - [X] Linting to make sure it confirms with python codestyles
 - [X] using black to make sure there is unified code formatting
-- [ ] using bandit to cover any common vulns in the code
+- [X] using bandit to cover any common vulns in the code
 - [ ] Production Deployment
   - [ ] Deployment to LXD Container
   - [ ] Deployment to Docker/Podman Container
@@ -117,4 +117,8 @@ uvicorn mongoapi:app --reload
  pylint --extension-pkg-whitelist='pydantic' mongoapi.py 
  ```
  This is currently getting a 10/10 rating.
- 
+### Black code formatting
+Minor changes mande
+
+### Bandit
+Found no major issues in the code
