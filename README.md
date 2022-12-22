@@ -4,14 +4,14 @@ This is a simple [Python](https://www.python.org/)/[MongoDB](https://mongodb.com
 This is meant to get a development project off to a running start.
 
 ## Requirements
-- [Python](https://www.python.org/downloads/) 
+- [Python](https://www.python.org/downloads/)
   - Version 3.10.6 was used, but any 3.10 subversion should work.
 - [Pip3](https://docs.python.org/3.10/installing/)
   - Version 22.0.2 was used, but any 22.0 subversion should work.
 - [MongoDB v6.0 - Community Edition (CE)](https://www.mongodb.com/try/download/community)
   - No other version of this was tested.
 - [MongoDB Compass](https://www.mongodb.com/docs/compass/current/install/)
-  - This is a nice to have GUI interface, but not mandatory. 
+  - This is a nice to have GUI interface, but not mandatory.
   - This will help alot of troubleshooting.
 - Operating Systems:
   - Ubuntu - 20.04/22.04 LTS Compatible
@@ -99,10 +99,10 @@ uvicorn mongoapi:app --reload
 
 # To Dos:
 - [ ] Unit tests
-- [ ] Possibly some await calls for mongo functions
+- [X] Possibly some await calls for mongo functions
 - [ ] Rewriting a couple of functions to be more efficient
 - [ ] Creating an install/deployment script for mongodb
-- [ ] Better documentation
+- [X] Better documentation
 - [ ] Virtual environment setup and documentation
 - [X] Linting to make sure it conforms with python codestyles
 - [X] using black to make sure there is unified code formatting
@@ -114,7 +114,7 @@ uvicorn mongoapi:app --reload
 ## Notes
 ### Linting
  ```
- pylint --extension-pkg-whitelist='pydantic' mongoapi.py 
+ pylint --extension-pkg-whitelist='pydantic' mongoapi.py
  ```
  This is currently getting a 10/10 rating.
 ### Black code formatting
