@@ -180,7 +180,7 @@ async def read_inventory(find_json):
 async def all_inventory():
     """Get all items in inventory collection."""
     try:
-        all_docs = inventory.find({}, {"_id": 0})
+        all_docs = await inventory.find({}, {"_id": 0})
 
     except PyMongoError as mongo_error:
         raise HTTPException(
