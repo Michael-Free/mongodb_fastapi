@@ -18,13 +18,6 @@ This is meant to get a development project off to a running start.
     - Ubuntu/Debian variants should work with slight modifications.
     - Other Linux Distros should also work with slight variations.
     - This is what this demo is based off of.
-  - MacOS - Expected to work
-    - Slight variations might be needed in `pyvenv.cfg` but since it's mostly BSD, it should work.
-    - Haven't tested anything BSD related.
-  - Windows - Pandora's Box
-    - `pyvenv.cfg` will need to be modified likely... even if all requirements are installed with exact versions.
-    - There may be some other versioning issues? Toss the dice.
-    - The next Windows Update could bork everything. Who knows?
 
 ## Installing MongoDB
 The first things we'll want to do is make sure Ubuntu Server is up to date and we install GNU Privacy Guard and Wget.
