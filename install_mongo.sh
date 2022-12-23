@@ -27,3 +27,6 @@ echo "mongodb-org-server hold" | dpkg --set-selections
 echo "mongodb-mongosh hold" | dpkg --set-selections
 echo "mongodb-org-mongos hold" | dpkg --set-selections
 echo "mongodb-org-tools hold" | dpkg --set-selections
+wait
+systemctl start mongod
+systemctl enable mongod
